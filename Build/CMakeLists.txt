@@ -3,10 +3,10 @@ cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 project(JoltPhysics CXX)
 
 # When turning this option on, the library will be compiled using assertions. By default asserts are enabled in Debug build.
-option(USE_ASSERTS "Enable asserts" OFF)
+option(USE_ASSERTS "Enable asserts" ON)
 
 # When turning this option on, the library will be compiled using doubles for positions. This allows for much bigger worlds.
-option(DOUBLE_PRECISION "Use double precision math" OFF)
+option(DOUBLE_PRECISION "Use double precision math" ON)
 
 # When turning this option on, the library will be compiled with debug symbols
 option(GENERATE_DEBUG_SYMBOLS "Generate debug symbols" ON)
@@ -34,7 +34,7 @@ option(INTERPROCEDURAL_OPTIMIZATION "Enable interprocedural optimizations" ON)
 option(FLOATING_POINT_EXCEPTIONS_ENABLED "Enable floating point exceptions" ON)
 
 # Number of bits to use in ObjectLayer. Can be 16 or 32.
-option(OBJECT_LAYER_BITS "Number of bits in ObjectLayer" 16)
+option(OBJECT_LAYER_BITS "Number of bits in ObjectLayer" 32)
 
 # Select X86 processor features to use (if everything is off it will be SSE2 compatible)
 option(USE_SSE4_1 "Enable SSE4.1" ON)
